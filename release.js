@@ -46,7 +46,7 @@ inquirer.prompt(questions).then(function(answers) {
 
   // run('npm test', dryRun) &&
     bumpVersion('package.json', pkg, dryRun) &&
-    run('npm run build', dryRun) &&
+    run('yarn build', dryRun) &&
     run('git add .', dryRun) &&
     run('git commit -m "' + newVerison + '"', dryRun) &&
     run('git push', dryRun) &&

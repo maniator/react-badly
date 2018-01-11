@@ -1,6 +1,6 @@
 {
   "name": "react-badly",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Error boundary react component",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
