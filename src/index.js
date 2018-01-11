@@ -31,6 +31,6 @@ export default ReactBadly;
 
 ReactBadly.propTypes = {
   children: PropTypes.node.isRequired,
-  hasError: PropTypes.func,
+  onError: PropTypes.func,
   render: PropTypes.func,
 };
