@@ -1,0 +1,8 @@
+.idea
+npm-debug.log
+node_modules
+config
+release.js
+.npmignore
+.gitignore
+rollup.config.js
