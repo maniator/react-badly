@@ -1,0 +1,30 @@
+{
+  "name": "react-badly",
+  "version": "0.0.0",
+  "description": "Error boundry react component",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maniator/react-badly.git"
+  },
+  "keywords": [
+    "react",
+    "error",
+    "boundary"
+  ],
+  "author": "Neal Lubin <naftalilubin@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maniator/react-badly/issues"
+  },
+  "homepage": "https://github.com/maniator/react-badly#readme",
+  "dependencies": {
+    "react": "16.2.0"
+  },
+  "devDependencies": {
+    "react-dom": "16.2.0"
+  }
+}
