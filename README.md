@@ -61,10 +61,12 @@ take in `{ error, info }` as a parameter. This will render **instead** of the di
 ```jsx harmony
 import ReactBadly from 'react-badly';
 
-const renderError = ({ error, info }) => ([
-  <h2>You have an error!</h2>,
-  <pre>{JSON.stringify(error)}'\n'{JSON.stringify(info)}</pre>
-]);
+const renderError = ({ error, info }) => (
+  <React.Fragment>
+      <h2>You have an error!</h2>
+      <pre>{JSON.stringify(error)}'\n'{JSON.stringify(info)}</pre>
+  </React.Fragment>
+);
 
 // some code later on
 
