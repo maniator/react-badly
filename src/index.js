@@ -1,13 +1,15 @@
 import { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+const dummyFunc = () => null;
+
 export class ReactBadly extends PureComponent {
   state = {
     hasError: false,
   };
 
   componentDidCatch (error, info) {
-    const errorHandler = this.props.onError || (() => null);
+    const errorHandler = this.props.onError || dummyFunc;
 
     this.setState({ hasError: true, errorInformation: { error, info } }, () => {
       errorHandler(error, info);
