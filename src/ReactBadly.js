@@ -9,7 +9,7 @@ const isFunction = function isFunction(functionToCheck) {
   );
 };
 
-export class ReactBadly extends PureComponent {
+class ReactBadly extends PureComponent {
   state = {
     hasError: false,
   };
@@ -55,3 +55,5 @@ ReactBadly.defaultProps = {
   onError: noop,
   render: noop,
 };
+
+export default ReactBadly;
