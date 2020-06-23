@@ -1,4 +1,3 @@
-import buble from 'rollup-plugin-buble';
 import filesize from 'rollup-plugin-filesize';
 import license from 'rollup-plugin-license';
 import babel from 'rollup-plugin-babel';
@@ -11,13 +10,19 @@ ${pkg.homepage}
 @preserve`;
 
 const config = {
+  external: ['react', 'prop-types'],
   input: 'src/index.js',
   output: {
+    exports: 'named',
     file: 'dist/index.js',
     format: 'umd',
     name: 'ReactBadly',
+    sourcemap: true,
+    globals: {
+      'react': 'React',
+      'prop-types': 'PropTypes'
+    }
   },
-  sourceMap: true,
   plugins: [
     babel(),
     filesize(),
