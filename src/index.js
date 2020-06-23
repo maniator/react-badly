@@ -1,1 +1,1 @@
-export * from "./ReactBadly.js";
+export { default } from './ReactBadly.jsx';

@@ -16,5 +16,6 @@ module.exports = {
   rules: {
     'import/prefer-default-export': 0,
     'react/state-in-constructor': 0,
+    'import/extensions': 0,
   },
 };
