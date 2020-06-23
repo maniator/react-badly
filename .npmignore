@@ -8,3 +8,5 @@ release.js
 rollup.config.js
 
 *-error.log
+.babelrc
+.nvmrc
