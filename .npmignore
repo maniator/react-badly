@@ -10,3 +10,4 @@ rollup.config.js
 *-error.log
 .babelrc
 .nvmrc
+.eslintrc.js
