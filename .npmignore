@@ -6,3 +6,5 @@ release.js
 .npmignore
 .gitignore
 rollup.config.js
+
+*-error.log
