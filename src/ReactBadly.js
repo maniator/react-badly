@@ -1,31 +1,46 @@
 import { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-const dummyFunc = () => null;
+const noop = () => null;
+const isFunction = function isFunction(functionToCheck) {
+  return (
+    functionToCheck && {}.toString.call(functionToCheck) === '[object Function]'
+  );
+};
 
 export class ReactBadly extends PureComponent {
   state = {
     hasError: false,
   };
 
-  componentDidCatch (error, info) {
-    const errorHandler = this.props.onError || dummyFunc;
+  componentDidCatch(error, info) {
+    const { onError } = this.props;
+    const errorHandler = isFunction(onError) ? onError : noop;
 
-    this.setState({ hasError: true, errorInformation: { error, info } }, () => {
-      errorHandler(error, info);
-    });
+    this.setState(
+      {
+        hasError: true,
+        errorInformation: { error, info },
+      },
+      () => {
+        errorHandler(error, info);
+      },
+    );
   }
 
-  render () {
-    if (this.state.hasError) {
-      if (this.props.render) {
-        return this.props.render(this.state.errorInformation);
+  render() {
+    const { render, children } = this.props;
+    const { hasError, errorInformation } = this.state;
+
+    if (hasError) {
+      if (isFunction(render)) {
+        return render(errorInformation);
       }
 
       return null;
     }
 
-    return this.props.children;
+    return children;
   }
 }
 
@@ -33,4 +48,9 @@ ReactBadly.propTypes = {
   children: PropTypes.node.isRequired,
   onError: PropTypes.func,
   render: PropTypes.func,
+};
+
+ReactBadly.defaultProps = {
+  onError: noop,
+  render: noop,
 };

@@ -1,7 +1,7 @@
 import filesize from 'rollup-plugin-filesize';
 import license from 'rollup-plugin-license';
 import babel from '@rollup/plugin-babel';
-import { terser } from "rollup-plugin-terser";
+import { terser } from 'rollup-plugin-terser';
 
 const pkg = require('./package.json');
 
@@ -10,11 +10,10 @@ ${pkg.homepage}
 @author ${pkg.author}
 @preserve`;
 
-
 const plugins = [
   babel({
     babelHelpers: 'runtime',
-    exclude: 'node_modules/**'
+    exclude: 'node_modules/**',
   }),
   filesize(),
   license({
@@ -25,20 +24,22 @@ const plugins = [
 const config = {
   external: ['react', 'prop-types', /@babel\/runtime\/.*/],
   input: 'src/index.js',
-  output: [{
-    file: 'dist/index.js',
-    format: 'cjs'
-  },{
-    file: 'dist/index.min.js',
-    format: 'cjs',
-    plugins: [
-      terser()
-    ]
-  }, {
-    file: 'dist/index.esm.js',
-    format: 'es'
-  }],
-  plugins
+  output: [
+    {
+      file: 'dist/index.js',
+      format: 'cjs',
+    },
+    {
+      file: 'dist/index.min.js',
+      format: 'cjs',
+      plugins: [terser()],
+    },
+    {
+      file: 'dist/index.esm.js',
+      format: 'es',
+    },
+  ],
+  plugins,
 };
 
 export default config;
