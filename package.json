@@ -32,6 +32,11 @@
       "eslint --fix"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged"
+    }
+  },
   "peerDependencies": {
     "@babel/runtime": "^7.10.3",
     "prop-types": "^15.7.2",

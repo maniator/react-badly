@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 const noop = () => null;
 const isFunction = function isFunction(functionToCheck) {
   return (
-    functionToCheck && {}.toString.call(functionToCheck) === '[object Function]'
+    functionToCheck
+    && Object.prototype.toString.call(functionToCheck) === '[object Function]'
   );
 };
 
