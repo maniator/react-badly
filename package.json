@@ -38,7 +38,7 @@
     }
   },
   "dependencies": {
-    "@babel/runtime": "^7.10.3"
+    "@babel/runtime": "^7.14.0"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
