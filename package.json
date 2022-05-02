@@ -59,7 +59,7 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
     "husky": "^4.2.5",
-    "inquirer": "^5.0.0",
+    "inquirer": "^8.2.4",
     "lint-staged": "^12.4.1",
     "prettier": "^2.0.5",
     "prop-types": "^15.7.2",
