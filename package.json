@@ -30,15 +30,15 @@
     "*.{js,jsx}": "eslint --cache --fix",
     "*.{js,jsx,json,css,md}": "prettier --write"
   },
-  "dependencies": {
-    "@babel/runtime": "^7.14.0"
-  },
+  "dependencies": {},
   "peerDependencies": {
+    "@babel/runtime": "^7.14.0",
     "prop-types": ">=15",
     "react": ">=16"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
+    "@babel/runtime": "^7.14.0",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/plugin-transform-runtime": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
