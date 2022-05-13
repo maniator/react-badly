@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maniator/react-badly.git"
+    "url": "git+https://github.com/serveside/react-badly.git"
   },
   "keywords": [
     "react",
@@ -23,9 +23,9 @@
   "author": "Naftali Lubin <naftalilubin@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maniator/react-badly/issues"
+    "url": "https://github.com/serveside/react-badly/issues"
   },
-  "homepage": "https://github.com/maniator/react-badly#readme",
+  "homepage": "https://github.com/serveside/react-badly#readme",
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix",
     "*.{js,jsx,json,css,md}": "prettier --write"
