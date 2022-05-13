@@ -1,21 +1,22 @@
+// eslint-disable-next-line no-undef
 module.exports = {
-  parser: 'babel-eslint',
   env: {
     browser: true,
-    es2020: true,
+    es2021: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ["eslint:recommended", "plugin:react/recommended"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 11,
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
-  plugins: ['react'],
-  rules: {
-    'import/prefer-default-export': 0,
-    'react/state-in-constructor': 0,
-    'import/extensions': 0,
+  settings: {
+    react: {
+      version: "detect",
+    },
   },
+  plugins: ["react"],
+  rules: {},
 };
