@@ -1,6 +1,6 @@
 {
   "name": "react-badly",
-  "version": "1.0.11",
+  "version": "1.0.10",
   "description": "Error boundary react component",
   "main": "dist/index.js",
   "module": "esm/index.js",
@@ -32,6 +32,7 @@
     "*.{js,jsx,json,css,md}": "prettier --write"
   },
   "peerDependencies": {
+    "@babel/runtime-corejs3": "^7.17.9",
     "prop-types": ">=15",
     "react": ">=16"
   },
@@ -41,6 +42,7 @@
     "@babel/plugin-transform-runtime": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
+    "@babel/runtime-corejs3": "^7.17.9",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
@@ -61,8 +63,5 @@
     "semver": "^7.3.7",
     "shelljs": "^0.8.5",
     "yarn-run-all": "^3.1.1"
-  },
-  "dependencies": {
-    "@babel/runtime-corejs3": "^7.17.9"
   }
 }
