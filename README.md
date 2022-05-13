@@ -2,7 +2,7 @@
 
 Take hold of your react lifecycle hooks with `react-badly`
 
-[![npm version](https://badge.fury.io/js/react-badly.svg)](https://badge.fury.io/js/react-badly)
+[![npm version](https://badge.fury.io/js/react-badly.svg)](https://www.npmjs.com/package/react-badly)
 
 You can install off of npm with
 
