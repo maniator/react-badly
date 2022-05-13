@@ -2,7 +2,7 @@
 npm-debug.log
 node_modules
 config
-release.js
+.github
 .npmignore
 .gitignore
 rollup.config.js
