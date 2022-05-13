@@ -33,6 +33,7 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: npm ci
+      - run: npm run build
       - run: |
           npx can-npm-publish --verbose && npm publish || echo "Does not publish"
         env:

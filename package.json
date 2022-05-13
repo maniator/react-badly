@@ -1,6 +1,6 @@
 {
   "name": "react-badly",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Error boundary react component",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
