@@ -2,7 +2,7 @@ node_modules
 .idea
 .DS_Store
 .eslintcache
-lib
 dist
+esm
 
 *error.log

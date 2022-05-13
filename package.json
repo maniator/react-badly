@@ -1,13 +1,13 @@
 {
   "name": "react-badly",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Error boundary react component",
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "module": "esm/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "prepublishOnly": "npm run build",
-    "build": "rimraf dist && npm-run-all build:*",
+    "build": "rimraf dist esm && npm-run-all build:*",
     "build:rollup": "rollup -c",
     "watch": "rollup -c -w",
     "prepare": "husky install"
@@ -32,18 +32,20 @@
     "*.{js,jsx,json,css,md}": "prettier --write"
   },
   "peerDependencies": {
-    "@babel/runtime": "^7.14.0",
+    "@babel/runtime-corejs3": "^7.17.9",
     "prop-types": ">=15",
     "react": ">=16"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.3",
-    "@babel/plugin-proposal-class-properties": "^7.10.1",
-    "@babel/plugin-transform-runtime": "^7.10.3",
-    "@babel/preset-env": "^7.10.3",
-    "@babel/preset-react": "^7.10.1",
-    "@babel/runtime": "^7.14.0",
-    "@rollup/plugin-babel": "^5.0.4",
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/runtime-corejs3": "^7.17.9",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "eslint": "^8.15.0",
     "eslint-plugin-react": "^7.29.4",
     "husky": "^8.0.1",
@@ -56,6 +58,7 @@
     "rollup": "^2.18.0",
     "rollup-plugin-filesize": "^9.0.1",
     "rollup-plugin-license": "^2.1.0",
+    "rollup-plugin-node-externals": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "semver": "^7.3.7",
     "shelljs": "^0.8.5",

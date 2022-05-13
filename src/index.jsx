@@ -1,11 +1,11 @@
-import { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import { PureComponent } from "react";
+import PropTypes from "prop-types";
 
 const noop = () => null;
 const isFunction = function isFunction(functionToCheck) {
   return (
-    functionToCheck
-    && Object.prototype.toString.call(functionToCheck) === '[object Function]'
+    functionToCheck &&
+    Object.prototype.toString.call(functionToCheck) === "[object Function]"
   );
 };
 
@@ -25,7 +25,7 @@ class ReactBadly extends PureComponent {
       },
       () => {
         errorHandler(error, info);
-      },
+      }
     );
   }
 
