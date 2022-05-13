@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "build": "rimraf dist && npm-run-all build:*",
     "build:rollup": "rollup -c",
-    "watch": "rollup -c -w"
+    "watch": "rollup -c -w",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -26,22 +27,15 @@
   },
   "homepage": "https://github.com/maniator/react-badly#readme",
   "lint-staged": {
-    "./**/*.{js,jsx}": [
-      "prettier --write",
-      "eslint --fix"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint-staged"
-    }
+    "*.{js,jsx}": "eslint --cache --fix",
+    "*.{js,jsx,json,css,md}": "prettier --write"
   },
   "dependencies": {
     "@babel/runtime": "^7.14.0"
   },
   "peerDependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.2.0"
+    "prop-types": ">=15",
+    "react": ">=16"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
@@ -61,8 +55,8 @@
     "inquirer": "^8.2.4",
     "lint-staged": "^12.4.1",
     "prettier": "^2.0.5",
-    "prop-types": "^15.7.2",
-    "react": "^18.1.0",
+    "prop-types": "^15.8.1",
+    "react": "^16.14.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.18.0",
     "rollup-plugin-filesize": "^9.0.1",
